@@ -10,7 +10,7 @@ export default function Project({ href, name, src }: ProjectProps) {
         className="aspect-video object-cover object-top border-1 border-gray-300"
         src={`/works/${src}`}
         alt={`${name} project thumbnail`}
-        />
+      />
       <p className="text-center font-medium">{ name }</p>
     </a>
   )
