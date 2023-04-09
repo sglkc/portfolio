@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Balancer from 'react-wrap-balancer'
 import Principle from './components/Principle'
 import Project from './components/Project'
 import Skill from './components/Skill'
@@ -16,12 +17,14 @@ function App() {
         <h2 className="font-bold text-xl">
           Front-End Developer / Back-End Developer
         </h2>
-        <p className="text-center leading-6">
-          I'm a web developer from Indonesia with 2 years experience. I’m
-          committed to create intuitive, responsive, and accessible websites
-          with maintainability and scalability as the focus in development while
-          considering the current industry best practices.
-          Exploring new things has always lead me to be a better programmer.
+        <p className="text-center leading-6.5 w-full">
+          <Balancer>
+            I'm a web developer from Indonesia with 2 years experience. I’m
+            committed to create intuitive, responsive, and accessible websites
+            with maintainability and scalability as the focus in development
+            while considering the current industry best practices.
+            Exploring new things has always lead me to be a better programmer.
+          </Balancer>
         </p>
         <div className="flex gap-8">
           <a className="i-si:github" href="https://github.com/sglkc/"></a>
@@ -68,19 +71,21 @@ function App() {
         </a>
       </Section>
       <Section title="About">
-        <p className="text-justify">
-          My name is Cikal Gemintang Seya, I’m currently an undergraduate in
-          National Institute of Technology, Bandung. Online, I usually go by
-          sglkc or seya.
-          Technology is what I have in mind ever since I was a child, my
-          curiosity in elementary school was a big turning point, leading me to
-          strive to be a programmer. Formally developed my skills vocational
-          high school as a software engineer, I was caught into web development
-          and I loved it.
+        <p className="text-center w-full">
+          <Balancer>
+            My name is Cikal Gemintang Seya, I’m currently an undergraduate in
+            National Institute of Technology, Bandung. Online, I usually go by
+            sglkc or seya.
+            Technology is what I have in mind ever since I was a child, my
+            curiosity in elementary school was a big turning point, leading me
+            to strive to be a programmer. Formally developed my skills
+            vocational high school as a software engineer, I was caught into
+            web development and I loved it.
+          </Balancer>
         </p>
       </Section>
-      <Section title="Principles">
-        <div className="grid gap-8">
+      <Section title="Principles" className="max-w-192">
+        <div className="ml-[clamp(0rem,5vw,8rem)] grid gap-8">
           <Principle title="Code">
             Reading documentation, following code design patterns, and
             embracing best practices are my principle in writing clean codes.
@@ -101,9 +106,11 @@ function App() {
         </div>
       </Section>
       <Section title="Skills" className="max-w-256">
-        <p className="text-center max-w-128">
-          The following is a selective list of programming languages, libraries,
-          frameworks, and technologies that I have used throughout my career.
+        <p className="text-center w-full max-w-128">
+          <Balancer>
+            The following is a selective list of programming languages, libraries,
+            frameworks, and technologies that I have used throughout my career.
+          </Balancer>
         </p>
         <div className="grid grid-cols-6 gap-8">
           <Skill name="HTML" icon="i-si:html5 text-[#e34f26]" />

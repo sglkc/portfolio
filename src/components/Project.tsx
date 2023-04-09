@@ -11,7 +11,7 @@ export default function Project({ href, name, src }: ProjectProps) {
         src={`/works/${src}`}
         alt={`${name} project thumbnail`}
         />
-      <p className="font-medium">{ name }</p>
+      <p className="text-center font-medium">{ name }</p>
     </a>
   )
 }
