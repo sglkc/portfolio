@@ -4,6 +4,7 @@ export default defineConfig({
   presets: [
     presetIcons({
       collections: {
+        mdi: () => import('@iconify-json/mdi/icons.json').then(i => i.default),
         si: () => (
           import('@iconify-json/simple-icons/icons.json').then(i => i.default)
         ),

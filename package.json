@@ -12,9 +12,11 @@
   "dependencies": {
     "@fontsource/dm-sans": "^4.5.9",
     "@fontsource/dm-serif-text": "^4.5.10",
+    "@iconify-json/mdi": "^1.1.50",
     "@iconify-json/simple-icons": "^1.1.48",
     "@unocss/reset": "^0.50.8",
     "clsx": "^1.2.1",
+    "framer-motion": "^10.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-wrap-balancer": "^0.4.0"
