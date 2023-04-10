@@ -18,15 +18,15 @@ export default function Hero() {
       </p>
       <div className="flex gap-8">
         <a
-          className="i-mdi:github transition-icon hover:text-[#333333]"
+          className="i-mdi:github transition-icon on:text-[#333333]"
           href="https://github.com/sglkc/"
         >GitHub</a>
         <a
-          className="i-mdi:linkedin transition-icon hover:text-[#1572b6]"
+          className="i-mdi:linkedin transition-icon on:text-[#1572b6]"
           href="https://linkedin.com/in/cikal-gs/"
         >LinkedIn</a>
         <a
-          className="i-mdi:gmail transition-icon hover:text-[#ff4a4a]"
+          className="i-mdi:gmail transition-icon on:text-[#ff4a4a]"
           href="mailto:cikalgemintangseya1@gmail.com"
         >Email</a>
       </div>

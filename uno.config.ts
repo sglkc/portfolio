@@ -34,4 +34,13 @@ export default defineConfig({
       serif: '"DM Serif Text", serif',
     },
   },
+  variants: [
+    (matcher) => {
+      if (!matcher.startsWith('on:')) return matcher
+      return {
+        matcher: matcher.slice(3),
+        selector: s => `${s}:hover, ${s}:focus`,
+      }
+    },
+  ],
 })
