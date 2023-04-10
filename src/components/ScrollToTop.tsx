@@ -20,7 +20,7 @@ export default function ScrollToTop() {
   return (
     <m.button
       className={clsx(
-        'fixed bottom-0 right-0 m-8',
+        'fixed bottom-0 right-0 m-4 sm:m-8',
         'i-mdi:arrow-up-drop-circle text-black text-2xl'
       )}
       animate={visible ? 'shown' : 'hidden'}

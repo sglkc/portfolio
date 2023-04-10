@@ -4,7 +4,9 @@ import Section from '@/components/Section'
 export default function Works() {
   return (
     <Section title="Featured Works" className="max-w-screen">
-      <div className="grid grid-cols-3 gap-8 justify-center max-w-256">
+      <div
+        className="grid grid-cols-2 sm:grid-cols-3 gap-8 justify-center max-w-256"
+      >
         <Project
           href="jr-academy"
           name="Jalan Rahmat Academy"

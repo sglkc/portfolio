@@ -9,7 +9,9 @@ export default function Section({ children, className, title }: SectionProps) {
         className
       )}
     >
-      <h1 className="text-5xl font-serif font-normal tracking-wide">{ title }</h1>
+      <h1 className="text-center font-serif font-normal text-5xl tracking-wide">
+        { title }
+      </h1>
       { children }
     </section>
   )

@@ -4,7 +4,7 @@ import Section from '@/components/Section'
 export default function Hero() {
   return (
     <Section title="Cikal Gemintang Seya" className="my-32 gap-8">
-      <h2 className="font-bold text-xl">
+      <h2 className="font-bold text-xl text-center">
         Front-End Developer / Back-End Developer
       </h2>
       <p className="text-center leading-6.5 w-full">

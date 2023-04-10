@@ -11,7 +11,7 @@ export default function Skills() {
           frameworks, and technologies that I have used throughout my career.
         </Balancer>
       </p>
-      <div className="grid grid-cols-6 gap-8">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8">
         <Skill name="HTML" icon="i-si:html5 group-hover:text-[#e34f26]" />
         <Skill name="CSS" icon="i-si:css3 group-hover:text-[#1572b6]" />
         <Skill name="JavaScript" icon="i-si:javascript group-hover:text-[#f2d70d]" />
