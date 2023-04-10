@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), UnoCSS()],
   resolve: {
     alias: {
-      '@/*': path.resolve('src')
+      '@': path.resolve(__dirname, 'src')
     }
   }
 })
