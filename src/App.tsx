@@ -4,6 +4,7 @@ import Works from '@/layouts/Works'
 import About from '@/layouts/About'
 import Principles from '@/layouts/Principles'
 import Skills from '@/layouts/Skills'
+import ScrollToTop from '@/components/ScrollToTop'
 
 function App() {
   useEffect(() => {
@@ -12,13 +13,16 @@ function App() {
   }, []);
 
   return (
-    <div className="mx-16 my-32 flex flex-col items-center">
-      <Hero />
-      <Works />
-      <About />
-      <Principles />
-      <Skills />
-    </div>
+    <>
+      <div className="mx-16 my-32 flex flex-col items-center">
+        <Hero />
+        <Works />
+        <About />
+        <Principles />
+        <Skills />
+      </div>
+      <ScrollToTop />
+    </>
   )
 }
 
