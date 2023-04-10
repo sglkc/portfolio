@@ -1,6 +1,28 @@
 import Balancer from 'react-wrap-balancer'
 import Section from '@/components/Section'
 import Skill from '@/components/Skill'
+import SkillProps from '@/types/Skill'
+
+const skills: SkillProps[] = [
+  { color: 'bg-[#e34f26]', name: 'HTML5', icon: 'i-si:html5' },
+  { color: 'bg-[#1572b6]', name: 'CSS3', icon: 'i-si:css3' },
+  { color: 'bg-[#f2d70d]', name: 'JavaScript', icon: 'i-si:javascript' },
+  { color: 'bg-[#3178c6]', name: 'Typescript', icon: 'i-si:typescript' },
+  { color: 'bg-[#339933]', name: 'Node JS', icon: 'i-si:nodejs' },
+  { color: 'bg-[#61dafb]', name: 'React', icon: 'i-si:react' },
+  { color: 'bg-[#4fc08d]', name: 'Vue.js', icon: 'i-si:vuejs' },
+  { color: 'bg-[#7952b3]', name: 'Bootstrap', icon: 'i-si:bootstrap' },
+  { color: 'bg-[#06b6d4]', name: 'Tailwind CSS', icon: 'i-si:tailwindcss' },
+  { color: 'bg-[#333333]', name: 'UnoCSS', icon: 'i-si:unocss' },
+  { color: 'bg-[#333333]', name: 'Express', icon: 'i-si:express' },
+  { color: 'bg-[#777bb4]', name: 'PHP', icon: 'i-si:php' },
+  { color: 'bg-[#ff2d20]', name: 'Laravel', icon: 'i-si:laravel' },
+  { color: 'bg-[#4479a1]', name: 'MariaDB', icon: 'i-si:mariadb' },
+  { color: 'bg-[#47a248]', name: 'MongoDB', icon: 'i-si:mongodb' },
+  { color: 'bg-[#87cf3e]', name: 'Linux Mint', icon: 'i-si:linuxmint' },
+  { color: 'bg-[#f05032]', name: 'Git', icon: 'i-si:git' },
+  { color: 'bg-[#57a143]', name: 'NeoVim', icon: 'i-si:neovim' },
+]
 
 export default function Skills() {
   return (
@@ -12,24 +34,7 @@ export default function Skills() {
         </Balancer>
       </p>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8">
-        <Skill name="HTML" icon="i-si:html5 group-hover:text-[#e34f26]" />
-        <Skill name="CSS" icon="i-si:css3 group-hover:text-[#1572b6]" />
-        <Skill name="JavaScript" icon="i-si:javascript group-hover:text-[#f2d70d]" />
-        <Skill name="TypeScript" icon="i-si:typescript group-hover:text-[#3178c6]" />
-        <Skill name="Node JS" icon="i-si:nodejs group-hover:text-[#339933]" />
-        <Skill name="React" icon="i-si:react group-hover:text-[#61dafb]" />
-        <Skill name="Vue.js" icon="i-si:vuejs group-hover:text-[#4fc08d]" />
-        <Skill name="Bootstrap" icon="i-si:bootstrap group-hover:text-[#7952b3]" />
-        <Skill name="Tailwind CSS" icon="i-si:tailwindcss group-hover:text-[#06b6d4]" />
-        <Skill name="UnoCSS" icon="i-si:unocss group-hover:text-[#333333]" />
-        <Skill name="Express" icon="i-si:express" />
-        <Skill name="PHP" icon="i-si:php group-hover:text-[#777bb4]" />
-        <Skill name="Laravel" icon="i-si:laravel group-hover:text-[#ff2d20]" />
-        <Skill name="MariaDB" icon="i-si:mariadb group-hover:text-[#4479a1]" />
-        <Skill name="MongoDB" icon="i-si:mongodb group-hover:text-[#47a248]" />
-        <Skill name="Linux Mint" icon="i-si:linuxmint group-hover:text-[#87cf3e]" />
-        <Skill name="Git" icon="i-si:git group-hover:text-[#f05032]" />
-        <Skill name="NeoVim" icon="i-si:neovim group-hover:text-[#57a143]" />
+        { skills.map((skill, i) => <Skill key={i} {...skill} />) }
       </div>
     </Section>
 

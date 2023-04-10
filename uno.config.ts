@@ -26,7 +26,7 @@ export default defineConfig({
     presetUno(),
   ],
   shortcuts: {
-    'transition-icon': 'transition-color ease-in-out duration-250'
+    'transition-icon': 'transition-background-color,color ease-in-out duration-250'
   },
   theme: {
     fontFamily: {
