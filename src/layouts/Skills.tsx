@@ -29,8 +29,9 @@ export default function Skills() {
     <Section title="Skills" className="max-w-256">
       <p className="text-center w-full max-w-128">
         <Balancer>
-          The following is a selective list of programming languages, libraries,
-          frameworks, and technologies that I have used throughout my career.
+          The following is a <u>selective</u> list of technologies that I have
+          used throughout my career. Of course, there are more than this and
+          will expand as time passes.
         </Balancer>
       </p>
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8">

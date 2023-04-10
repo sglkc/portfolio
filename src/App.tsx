@@ -18,8 +18,8 @@ function App() {
         <Hero />
         <Works />
         <About />
-        <Principles />
         <Skills />
+        <Principles />
       </div>
       <ScrollToTop />
     </>
