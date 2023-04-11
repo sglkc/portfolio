@@ -17,7 +17,7 @@ export default function Principle({ children, right, title }: PrincipleProps) {
       </p>
       <p
         className={clsx(
-          'col-span-6 sm:col-span-5 w-full',
+          'mb-4 sm:mb-0 col-span-6 sm:col-span-5 w-full',
           right && 'text-right sm:text-left'
         )}
       >

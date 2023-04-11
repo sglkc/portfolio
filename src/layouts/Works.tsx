@@ -20,7 +20,7 @@ export default function Works() {
         { projects.map((project, i) => <Project key={i} {...project} />)}
       </div>
       <a
-        className="font-serif no-underline text-lg"
+        className="font-serif no-underline text-base sm:text-lg"
         href="https://sglkc.my.id/projects/"
       >
         view more

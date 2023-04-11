@@ -14,7 +14,9 @@ function App() {
 
   return (
     <>
-      <div className="mx-8 md:mx-16 my-16 md:my-32 flex flex-col items-center">
+      <div
+        className="mx-8 md:mx-16 my-16 md:my-32 flex flex-col items-center text-sm sm:text-base"
+      >
         <Hero />
         <Works />
         <About />
