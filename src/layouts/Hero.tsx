@@ -26,7 +26,7 @@ export default function Hero() {
           href="https://linkedin.com/in/cikal-gs/"
         >LinkedIn</a>
         <a
-          className="i-mdi:gmail transition-icon on:text-[#ff4a4a]"
+          className="i-mdi:gmail transition-icon on:text-[#d14836]"
           href="mailto:cikalgemintangseya1@gmail.com"
         >Email</a>
       </div>

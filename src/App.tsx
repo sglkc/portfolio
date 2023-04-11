@@ -5,6 +5,7 @@ import About from '@/layouts/About'
 import Principles from '@/layouts/Principles'
 import Skills from '@/layouts/Skills'
 import ScrollToTop from '@/components/ScrollToTop'
+import Footer from './layouts/Footer'
 
 function App() {
   useEffect(() => {
@@ -22,6 +23,7 @@ function App() {
         <About />
         <Skills />
         <Principles />
+        <Footer />
       </div>
       <ScrollToTop />
     </>

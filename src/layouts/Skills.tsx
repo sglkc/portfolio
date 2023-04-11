@@ -19,7 +19,7 @@ const skills: SkillProps[] = [
   { color: 'bg-[#ff2d20]', name: 'Laravel', icon: 'i-si:laravel' },
   { color: 'bg-[#4479a1]', name: 'MariaDB', icon: 'i-si:mariadb' },
   { color: 'bg-[#47a248]', name: 'MongoDB', icon: 'i-si:mongodb' },
-  { color: 'bg-[#87cf3e]', name: 'Linux Mint', icon: 'i-si:linuxmint' },
+  { color: 'bg-[#333333]', name: 'Linux', icon: 'i-si:linux' },
   { color: 'bg-[#f05032]', name: 'Git', icon: 'i-si:git' },
   { color: 'bg-[#57a143]', name: 'NeoVim', icon: 'i-si:neovim' },
 ]
