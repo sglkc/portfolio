@@ -1,6 +1,7 @@
 import { render } from 'preact'
 import { Provider } from 'react-wrap-balancer'
 import { LazyMotion } from 'framer-motion'
+import { ReactLenis } from '@studio-freight/react-lenis'
 import App from './App'
 import '@fontsource/dm-sans/400.css'
 import '@fontsource/dm-sans/500.css'
@@ -14,7 +15,9 @@ const framerFeatures = () => import('@/framer-features').then(i => i.default)
 render(
   <LazyMotion features={framerFeatures} strict>
     <Provider>
-      <App />
+      <ReactLenis root>
+        <App />
+      </ReactLenis>
     </Provider>
   </LazyMotion>,
   document.getElementById('root')!

@@ -1,4 +1,5 @@
 import { useState } from 'preact/hooks'
+import Cursor from '@/components/Cursor'
 import ScrollToTop from '@/components/ScrollToTop'
 import Hero from '@/layouts/Hero'
 import Works from '@/layouts/Works'
@@ -13,7 +14,10 @@ export default function App() {
 
   return (
     <>
-      { !loaded && <Loader setter={setLoaded} /> }
+      { loaded
+          ? <Cursor />
+          : <Loader setter={setLoaded} />
+      }
       <div
         className="mx-8 md:mx-16 my-16 md:my-32 flex flex-col items-center text-sm sm:text-base"
       >
