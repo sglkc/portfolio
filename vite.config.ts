@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import Preact from '@preact/preset-vite'
 import UnoCSS from 'unocss/vite'
 import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), UnoCSS()],
+  plugins: [Preact(), UnoCSS()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
