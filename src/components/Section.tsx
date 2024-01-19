@@ -1,5 +1,11 @@
+import { ComponentChildren } from 'preact'
 import clsx from 'clsx'
-import SectionProps from '@/types/Section'
+
+export type SectionProps = {
+  children: ComponentChildren
+  className?: string
+  title: string
+}
 
 export default function Section({ children, className, title }: SectionProps) {
   return (

@@ -1,5 +1,10 @@
 import clsx from 'clsx'
-import SkillProps from '@/types/Skill'
+
+export type SkillProps = {
+  color?: string
+  icon: string
+  name: string
+}
 
 export default function Skill({ color, icon, name }: SkillProps) {
   return (

@@ -1,5 +1,4 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { render } from 'preact'
 import { Provider } from 'react-wrap-balancer'
 import { LazyMotion } from 'framer-motion'
 import App from './App'
@@ -12,12 +11,11 @@ import 'virtual:uno.css'
 
 const framerFeatures = () => import('@/framer-features').then(i => i.default)
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <LazyMotion features={framerFeatures} strict>
-      <Provider>
-        <App />
-      </Provider>
-    </LazyMotion>
-  </React.StrictMode>,
+render(
+  <LazyMotion features={framerFeatures} strict>
+    <Provider>
+      <App />
+    </Provider>
+  </LazyMotion>,
+  document.getElementById('root')!
 )

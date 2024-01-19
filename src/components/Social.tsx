@@ -1,4 +1,8 @@
-import SocialProps from '@/types/Social'
+export type SocialProps = {
+  href: string
+  icon: string
+  name?: string
+}
 
 export default function Social({ href, icon, name }: SocialProps) {
   return (

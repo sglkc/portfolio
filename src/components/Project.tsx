@@ -1,4 +1,8 @@
-import ProjectProps from '@/types/Project'
+export type ProjectProps = {
+  href: string
+  name: string
+  src: string
+}
 
 export default function Project({ href, name, src }: ProjectProps) {
   return (
