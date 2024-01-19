@@ -1,20 +1,19 @@
-import { useEffect } from 'react'
+import { useState } from 'preact/hooks'
+import ScrollToTop from '@/components/ScrollToTop'
 import Hero from '@/layouts/Hero'
 import Works from '@/layouts/Works'
 import About from '@/layouts/About'
 import Principles from '@/layouts/Principles'
 import Skills from '@/layouts/Skills'
-import ScrollToTop from '@/components/ScrollToTop'
-import Footer from './layouts/Footer'
+import Footer from '@/layouts/Footer'
+import Loader from '@/layouts/Loader'
 
-function App() {
-  useEffect(() => {
-    document.body.classList.remove()
-    document.body.classList.add('bg-zinc-50')
-  }, []);
+export default function App() {
+  const [loaded, setLoaded] = useState(false)
 
   return (
     <>
+      { !loaded && <Loader setter={setLoaded} /> }
       <div
         className="mx-8 md:mx-16 my-16 md:my-32 flex flex-col items-center text-sm sm:text-base"
       >
@@ -29,5 +28,3 @@ function App() {
     </>
   )
 }
-
-export default App
