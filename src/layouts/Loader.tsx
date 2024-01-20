@@ -33,7 +33,7 @@ export default function Loader({ setter }: LoaderProps) {
         originY: 1,
         cursor: 'progress'
       }}
-      animate={progress < 100 ? {} : { y: '-100vh' }}
+      animate={progress < 100 ? {} : { y: '-100svh' }}
       transition={{
         type: 'spring',
         delay: 1,
@@ -45,7 +45,7 @@ export default function Loader({ setter }: LoaderProps) {
       <motion.div
         style={{
           width: '1px',
-          height: '100vh',
+          height: '100svh',
           margin: 'auto',
           marginTop: 0,
           backgroundColor: 'black',

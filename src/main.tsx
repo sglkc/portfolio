@@ -9,6 +9,7 @@ import '@fontsource/dm-sans/latin-700.css'
 import '@fontsource/dm-serif-text'
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
+import './style.css'
 
 const framerFeatures = () => import('@/framer-features').then(i => i.default)
 
