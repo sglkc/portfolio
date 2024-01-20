@@ -30,7 +30,8 @@ export default function Loader({ setter }: LoaderProps) {
         display: 'flex',
         alignItems: 'center',
         backgroundColor: 'white',
-        originY: 1
+        originY: 1,
+        cursor: 'progress'
       }}
       animate={progress < 100 ? {} : { y: '-100vh' }}
       transition={{
@@ -39,6 +40,7 @@ export default function Loader({ setter }: LoaderProps) {
         duration: 1
       }}
       onAnimationComplete={() => setter(true)}
+      data-lenis-prevent
     >
       <motion.div
         style={{

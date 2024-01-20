@@ -1,7 +1,6 @@
 import Balancer from 'react-wrap-balancer'
 import Section from '@/components/Section'
-import SocialProps from '@/types/Social'
-import Social from '@/components/Social'
+import Social, { SocialProps } from '@/components/Social'
 
 const socials: SocialProps[] = [
   { href: 'https://sglkc.my.id', icon: 'i-mdi:web' },
@@ -17,7 +16,7 @@ const socials: SocialProps[] = [
 
 export default function Footer() {
   return (
-    <Section title="" className="my-32 sm:my-16">
+    <Section className="my-32 sm:my-16">
       <h2 className="text-center text-lg sm:text-xl">
         <Balancer>
           If you wish to know more about me or my projects, you can

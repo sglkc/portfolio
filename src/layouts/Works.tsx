@@ -1,6 +1,5 @@
-import Project from '@/components/Project'
+import Project, { ProjectProps } from '@/components/Project'
 import Section from '@/components/Section'
-import ProjectProps from '@/types/Project'
 
 const projects: ProjectProps[] = [
   { href: 'jr-academy', name: 'Jalan Rahmat Academy', src: 'jr-academy.webp' },

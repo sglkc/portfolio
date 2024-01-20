@@ -32,6 +32,8 @@ export default function Cursor() {
 
   return (
     <motion.div
+      // @ts-ignore
+      class="print:hidden"
       style={{
         left: cursorSpring.x,
         top: cursorSpring.y,

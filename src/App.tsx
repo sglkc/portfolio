@@ -8,6 +8,7 @@ import Principles from '@/layouts/Principles'
 import Skills from '@/layouts/Skills'
 import Footer from '@/layouts/Footer'
 import Loader from '@/layouts/Loader'
+import clsx from 'clsx'
 
 export default function App() {
   const [loaded, setLoaded] = useState(false)
@@ -19,7 +20,11 @@ export default function App() {
           : <Loader setter={setLoaded} />
       }
       <div
-        className="mx-8 md:mx-16 my-16 md:my-32 flex flex-col items-center text-sm sm:text-base"
+        className={clsx(
+          'mx-8 md:mx-16 my-16 md:my-32 flex flex-col items-center text-sm sm:text-base',
+          '!print:my-0 print:mx-16',
+          !loaded && 'overflow-hidden'
+        )}
       >
         <Hero />
         <Works />

@@ -1,7 +1,6 @@
 import Balancer from 'react-wrap-balancer'
 import Section from '@/components/Section'
-import Skill from '@/components/Skill'
-import SkillProps from '@/types/Skill'
+import Skill, { SkillProps } from '@/components/Skill'
 
 const skills: SkillProps[] = [
   { color: 'bg-[#e34f26]', name: 'HTML5', icon: 'i-si:html5' },
