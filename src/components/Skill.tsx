@@ -8,9 +8,9 @@ export type SkillProps = {
 
 export default function Skill({ color, icon, name }: SkillProps) {
   return (
-    <div className="select-none">
-      <p className={clsx('transition-icon delay-250', color, icon)}></p>
-      <p className="mt-2 text-sm sm:text-base text-center">{ name }</p>
+    <div class="select-none">
+      <p class={clsx('transition-icon delay-250', color, icon)}></p>
+      <p class="mt-2 text-sm sm:text-base text-center">{ name }</p>
     </div>
   )
 }

@@ -16,19 +16,10 @@ export default function Hero() {
           Exploring new things has always lead me to be a better programmer.
         </Balancer>
       </p>
-      <div className="flex gap-8">
-        <a
-          className="i-mdi:github transition-icon on:text-[#333333]"
-          href="https://github.com/sglkc/"
-        >GitHub</a>
-        <a
-          className="i-mdi:linkedin transition-icon on:text-[#1572b6]"
-          href="https://linkedin.com/in/cikal-gs/"
-        >LinkedIn</a>
-        <a
-          className="i-mdi:gmail transition-icon on:text-[#d14836]"
-          href="mailto:cikalgemintangseya1@gmail.com"
-        >Email</a>
+      <div class="flex gap-8">
+        <a class="i-mdi:github" href="https://github.com/sglkc/" />
+        <a class="i-mdi:linkedin" href="https://linkedin.com/in/cikal-gs/" />
+        <a class="i-mdi:gmail" href="mailto:cikalgemintangseya1@gmail.com" />
       </div>
     </Section>
   )

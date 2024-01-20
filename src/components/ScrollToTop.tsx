@@ -29,6 +29,6 @@ export default function ScrollToTop() {
       initial="hidden"
       variants={variants}
       onClick={onClick}
-    >To Top</m.button>
+    />
   )
 }

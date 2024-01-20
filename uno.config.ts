@@ -1,14 +1,17 @@
 import { defineConfig, presetIcons, presetTypography, presetUno } from 'unocss'
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 
 export default defineConfig({
   presets: [
     presetIcons({
       collections: {
+        my: FileSystemIconLoader('./src/assets/icons'),
         mdi: () => import('@iconify-json/mdi/icons.json').then(i => i.default),
-        si: () => (
-          import('@iconify-json/simple-icons/icons.json').then(i => i.default)
+        dev: () => (
+          import('@iconify-json/devicon/icons.json').then(i => i.default)
         ),
       },
+      mode: 'background-img',
       scale: 2,
       warn: true,
     }),
