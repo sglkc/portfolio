@@ -11,12 +11,11 @@ const socials: SocialProps[] = [
     icon: 'i-mdi:gmail',
     name: 'cikalgemintangseya1@gmail.com'
   },
-  { href: 'https://instagram.com/ckl_gs/', icon: 'i-mdi:instagram' },
 ]
 
-export default function Footer() {
+export default function Contacts() {
   return (
-    <Section className="my-32 sm:my-16">
+    <Section id="contacts" className="my-32 sm:my-16">
       <h2 className="text-center text-lg sm:text-xl">
         <Balancer>
           If you wish to know more about me or my projects, you can

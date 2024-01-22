@@ -4,12 +4,14 @@ import clsx from 'clsx'
 export type SectionProps = {
   children: ComponentChildren
   className?: string
+  id?: string
   title?: string
 }
 
-export default function Section({ children, className, title }: SectionProps) {
+export default function Section({ children, className, id, title }: SectionProps) {
   return (
     <section
+      id={id}
       class={clsx(
         'prose my-16 flex flex-col justify-center items-center gap-16 w-full',
         'h-auto print:h-[11in] print:my-0',

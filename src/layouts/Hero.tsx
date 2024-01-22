@@ -1,7 +1,14 @@
 import Balancer from 'react-wrap-balancer'
 import Section from '@/components/Section'
+import { useLenis } from '@studio-freight/react-lenis'
 
 export default function Hero() {
+  const lenis = useLenis()
+  const toContacts = () => lenis.scrollTo('#contacts', {
+    duration: 3,
+    force: true
+  })
+
   return (
     <Section title="Cikal Gemintang Seya" className="my-32 gap-8">
       <h2 className="font-bold text-lg sm:text-xl text-center">
@@ -16,11 +23,12 @@ export default function Hero() {
           Exploring new things has always lead me to be a better programmer.
         </Balancer>
       </p>
-      <div class="flex gap-8">
-        <a class="i-mdi:github" href="https://github.com/sglkc/" />
-        <a class="i-mdi:linkedin" href="https://linkedin.com/in/cikal-gs/" />
-        <a class="i-mdi:gmail" href="mailto:cikalgemintangseya1@gmail.com" />
-      </div>
+      <button
+        class="bg-black text-white fw-bold px-8 py-4"
+        onClick={toContacts}
+      >
+        Contacts
+      </button>
     </Section>
   )
 }

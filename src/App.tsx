@@ -6,7 +6,7 @@ import Works from '@/layouts/Works'
 import About from '@/layouts/About'
 import Principles from '@/layouts/Principles'
 import Skills from '@/layouts/Skills'
-import Footer from '@/layouts/Footer'
+import Contacts from '@/layouts/Contacts'
 import Loader from '@/layouts/Loader'
 import clsx from 'clsx'
 
@@ -34,7 +34,7 @@ export default function App() {
         <About />
         <Skills />
         <Principles />
-        <Footer />
+        <Contacts />
       </div>
       <ScrollToTop />
     </>
