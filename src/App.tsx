@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'preact/hooks'
+import { m as motion } from 'framer-motion'
+import clsx from 'clsx'
 import Cursor from '@/components/Cursor'
 import ScrollToTop from '@/components/ScrollToTop'
 import Hero from '@/layouts/Hero'
@@ -8,35 +10,49 @@ import Principles from '@/layouts/Principles'
 import Skills from '@/layouts/Skills'
 import Contacts from '@/layouts/Contacts'
 import Loader from '@/layouts/Loader'
-import clsx from 'clsx'
+import { useLenis } from '@studio-freight/react-lenis'
 
 export default function App() {
-  const [loaded, setLoaded] = useState(false)
+  const [loader, setLoader] = useState(true)
+  const lenis = useLenis()
 
   useEffect(() => {
-    document.documentElement.classList.toggle('overflow-hidden', !loaded)
-  }, [loaded])
+    if (loader) {
+      lenis?.stop()
+      lenis?.scrollTo(0, { force: true, immediate: true })
+    } else {
+      lenis.start()
+      document.body.classList.remove('overflow-hidden')
+    }
+  }, [loader])
 
   return (
     <>
-      { loaded
-          ? <Cursor />
-          : <Loader setter={setLoaded} />
-      }
-      <div
-        className={clsx(
-          'mx-8 md:mx-16 my-16 md:my-32 flex flex-col items-center text-sm sm:text-base',
-          '!print:my-0 print:mx-16',
-        )}
+      { loader && <Loader setLoader={setLoader} /> }
+      <motion.div
+        initial={{ backgroundColor: '#000' }}
+        animate={{ backgroundColor: '#fff' }}
+        transition={{
+          delay: 2.5,
+          duration: 1
+        }}
       >
-        <Hero />
-        <Works />
-        <About />
-        <Skills />
-        <Principles />
-        <Contacts />
-      </div>
+        <div
+          className={clsx(
+            'px-8 md:px-16 py-16 md:py-32 flex flex-col items-center',
+            'text-sm sm:text-base !print:py-0 print:px-16',
+          )}
+        >
+          <Hero />
+          <Works />
+          <About />
+          <Skills />
+          <Principles />
+          <Contacts />
+        </div>
+      </motion.div>
       <ScrollToTop />
+      <Cursor />
     </>
   )
 }

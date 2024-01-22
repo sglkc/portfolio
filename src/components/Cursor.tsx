@@ -19,15 +19,25 @@ export default function Cursor() {
     y: useSpring(cursor.y, options)
   }
 
-  const onMouseMove = ({ clientX, clientY }: MouseEvent) => {
+  const updateCursorPosition = ({ clientX, clientY }: MouseEvent) => {
     cursor.x.set(clientX - size / 2)
     cursor.y.set(clientY - size / 2)
   }
 
-  useEffect(() => {
-    window.addEventListener('mousemove', onMouseMove)
+  let mouseResetTimeout: ReturnType<typeof setTimeout>
+  const resetCursorPosition = () => {
+    clearTimeout(mouseResetTimeout)
+    mouseResetTimeout = setTimeout(() => cursor.y.set(window.outerHeight), 5000)
+  }
 
-    return () => window.removeEventListener('mousemove', onMouseMove)
+  useEffect(() => {
+    window.addEventListener('mousemove', updateCursorPosition)
+    window.addEventListener('scroll', resetCursorPosition)
+
+    return () => {
+      window.removeEventListener('mousemove', updateCursorPosition)
+      window.removeEventListener('scroll', resetCursorPosition)
+  }
   }, [])
 
   return (
@@ -45,7 +55,8 @@ export default function Cursor() {
         pointerEvents: 'none',
         backdropFilter: 'invert(1)',
         mixBlendMode: 'difference',
-        zIndex: 5
+        zIndex: 5,
+        cursor: 'pointer'
       }}
     />
   )

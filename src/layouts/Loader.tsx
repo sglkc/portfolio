@@ -2,10 +2,10 @@ import { StateUpdater, useEffect, useState } from 'preact/hooks'
 import { m as motion } from 'framer-motion'
 
 export type LoaderProps = {
-  setter: StateUpdater<boolean>
+  setLoader: StateUpdater<boolean>
 }
 
-export default function Loader({ setter }: LoaderProps) {
+export default function Loader({ setLoader }: LoaderProps) {
   const curtainStyle = {
     position: 'fixed',
     backgroundColor: 'white',
@@ -58,7 +58,6 @@ export default function Loader({ setter }: LoaderProps) {
             }
           },
           loaded: {
-            x: -10,
             opacity: 0,
             scaleY: 1,
             transition: {
@@ -78,14 +77,14 @@ export default function Loader({ setter }: LoaderProps) {
         </p>
       </motion.div>
       <motion.div
-        style={{ ...curtainStyle, inset: '0 50% 0 0', originY: 1 }}
+        style={{ ...curtainStyle, inset: '0 50% 0 0', originY: 0 }}
         animate={progress == 100 && { scaleY: 0 }}
         transition={curtainTransition}
-        onAnimationComplete={() => setter(true)}
+        onAnimationComplete={() => setLoader(false)}
         data-lenis-prevent
       />
       <motion.div
-        style={{ ...curtainStyle, inset: '0 0 0 50%', originY: 0 }}
+        style={{ ...curtainStyle, inset: '0 0 0 50%', originY: 1 }}
         animate={progress == 100 && { scaleY: 0 }}
         transition={curtainTransition}
         data-lenis-prevent
