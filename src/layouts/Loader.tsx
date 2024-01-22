@@ -6,6 +6,18 @@ export type LoaderProps = {
 }
 
 export default function Loader({ setter }: LoaderProps) {
+  const curtainStyle = {
+    position: 'fixed',
+    backgroundColor: 'white',
+    cursor: 'progress',
+  }
+
+  const curtainTransition = {
+    type: 'spring',
+    delay: 0.5,
+    duration: 1.25
+  }
+
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
@@ -22,34 +34,17 @@ export default function Loader({ setter }: LoaderProps) {
   }, [progress])
 
   return (
-    <motion.div
-      style={{
-        position: 'fixed',
-        inset: 0,
-        zIndex: 5,
-        display: 'flex',
-        alignItems: 'center',
-        backgroundColor: 'white',
-        originY: 1,
-        cursor: 'progress'
-      }}
-      animate={progress < 100 ? {} : { y: '-100svh' }}
-      transition={{
-        type: 'spring',
-        delay: 1,
-        duration: 1
-      }}
-      onAnimationComplete={() => setter(true)}
-      data-lenis-prevent
-    >
+    <div class="fixed inset-0">
       <motion.div
         style={{
           width: '1px',
           height: '100svh',
           margin: 'auto',
           marginTop: 0,
+          zIndex: 99,
           backgroundColor: 'black',
           position: 'relative',
+          inset: 0,
           originY: 0
         }}
         initial={{ scaleY: 0 }}
@@ -82,6 +77,19 @@ export default function Loader({ setter }: LoaderProps) {
           <span class="fw-thin">%</span>
         </p>
       </motion.div>
-    </motion.div>
+      <motion.div
+        style={{ ...curtainStyle, inset: '0 50% 0 0', originY: 1 }}
+        animate={progress == 100 && { scaleY: 0 }}
+        transition={curtainTransition}
+        onAnimationComplete={() => setter(true)}
+        data-lenis-prevent
+      />
+      <motion.div
+        style={{ ...curtainStyle, inset: '0 0 0 50%', originY: 0 }}
+        animate={progress == 100 && { scaleY: 0 }}
+        transition={curtainTransition}
+        data-lenis-prevent
+      />
+    </div>
   )
 }
