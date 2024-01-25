@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'preact/hooks'
-import { m as motion } from 'framer-motion'
+import { m as motion, useScroll } from 'framer-motion'
+import { useLenis } from '@studio-freight/react-lenis'
 import clsx from 'clsx'
 import Cursor from '@/components/Cursor'
 import ScrollToTop from '@/components/ScrollToTop'
+import Progress from '@/components/Progress'
 import Hero from '@/layouts/Hero'
 import Projects from '@/layouts/Projects'
 import About from '@/layouts/About'
@@ -10,10 +12,10 @@ import Principles from '@/layouts/Principles'
 import Skills from '@/layouts/Skills'
 import Contacts from '@/layouts/Contacts'
 import Loader from '@/layouts/Loader'
-import { useLenis } from '@studio-freight/react-lenis'
 
 export default function App() {
   const [loader, setLoader] = useState(true)
+  const { scrollYProgress: progress } = useScroll()
   const lenis = useLenis()
 
   useEffect(() => {
@@ -28,7 +30,6 @@ export default function App() {
 
   return (
     <>
-      { loader && <Loader setLoader={setLoader} /> }
       <motion.div
         initial={{ backgroundColor: '#000' }}
         animate={{ backgroundColor: '#fff' }}
@@ -51,8 +52,10 @@ export default function App() {
           <Contacts />
         </div>
       </motion.div>
+      <Progress progress={progress} />
       <ScrollToTop />
       <Cursor />
+      { loader && <Loader setLoader={setLoader} /> }
     </>
   )
 }

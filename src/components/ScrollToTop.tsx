@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'preact/hooks'
 import clsx from 'clsx'
 import { m } from 'framer-motion'
 import { useLenis } from '@studio-freight/react-lenis';
@@ -10,7 +10,7 @@ const variants = {
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false);
-  const lenis = useLenis(({ scroll }) => setVisible(scroll > 100));
+  const lenis = useLenis(({ scroll }) => setVisible(scroll > 200));
 
   const onClick = () => lenis.scrollTo(document.documentElement, {
     duration: 2,

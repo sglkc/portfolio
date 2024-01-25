@@ -15,7 +15,7 @@ export default function Hero() {
       <h2 className="font-bold text-lg sm:text-xl text-center">
         Front-End Developer / Back-End Developer
       </h2>
-      <p className="text-center leading-6.5 w-full">
+      <p className="text-center leading-6.5">
         <Balancer>
           I'm a web developer from Indonesia with 2 years experience. I’m
           committed to create intuitive, responsive, and accessible websites
@@ -33,6 +33,12 @@ export default function Hero() {
       >
         Contacts
       </button>
+      <div
+        class={clsx(
+          'print:mt-8 print:pl-0 px-0.25 py-8 bg-black z-0 print:animate-none',
+          'animate-[3s_ease_1s_scroll-scale_infinite_both]'
+        )}
+      />
     </Section>
   )
 }
