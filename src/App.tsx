@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Cursor from '@/components/Cursor'
 import ScrollToTop from '@/components/ScrollToTop'
 import Hero from '@/layouts/Hero'
-import Works from '@/layouts/Works'
+import Projects from '@/layouts/Projects'
 import About from '@/layouts/About'
 import Principles from '@/layouts/Principles'
 import Skills from '@/layouts/Skills'
@@ -44,7 +44,7 @@ export default function App() {
           )}
         >
           <Hero />
-          <Works />
+          <Projects />
           <About />
           <Skills />
           <Principles />

@@ -1,6 +1,7 @@
 import Balancer from 'react-wrap-balancer'
 import Section from '@/components/Section'
 import { useLenis } from '@studio-freight/react-lenis'
+import clsx from 'clsx'
 
 export default function Hero() {
   const lenis = useLenis()
@@ -24,7 +25,10 @@ export default function Hero() {
         </Balancer>
       </p>
       <button
-        class="bg-black text-white fw-bold px-8 py-4"
+        class={clsx(
+          'b-2 b-black text-black fw-bold px-8 py-4 sm:(b-1 px-6 py-2)',
+          'print:hidden transition-colors on:bg-black on:text-white'
+        )}
         onClick={toContacts}
       >
         Contacts
