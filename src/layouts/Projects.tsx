@@ -19,7 +19,7 @@ const projects: ProjectProps[] = [
 
 export default function Projects() {
   return (
-    <Section title="Featured Projects" className="max-w-screen">
+    <Section title="Various Projects" className="max-w-screen">
       <div
         className={clsx(
           'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4',

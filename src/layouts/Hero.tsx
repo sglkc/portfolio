@@ -17,11 +17,10 @@ export default function Hero() {
       </h2>
       <p className="text-center leading-6.5">
         <Balancer>
-          I'm a web developer from Indonesia with 2 years experience. I’m
-          committed to create intuitive, responsive, and accessible websites
-          with maintainability and scalability as the focus in development
-          while considering the current industry best practices.
-          Exploring new things has always lead me to be a better programmer.
+          I am a web developer from Indonesia with 2 years experience. Usually
+          work around my hobbies and interests, I always try to be imaginative
+          to train my creative thinking skill. Exploring new things has always
+          lead me to be a better programmer.
         </Balancer>
       </p>
       <button
