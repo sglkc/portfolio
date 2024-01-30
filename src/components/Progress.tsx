@@ -11,7 +11,7 @@ export default function Progress({ progress }: ProgressProps) {
   return (
     <motion.div
       // @ts-ignore
-      class="fixed left-0 bottom-0 bg-black pt-1 sm:pt-2"
+      class="fixed left-0 bottom-0 bg-black pt-1 sm:pt-2 print:hidden"
       style={{ right: spring }}
     />
   )

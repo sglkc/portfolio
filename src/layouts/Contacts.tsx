@@ -15,7 +15,7 @@ const socials: SocialProps[] = [
 
 export default function Contacts() {
   return (
-    <Section id="contacts" className="my-32 sm:my-16">
+    <Section id="contacts" className="my-32 sm:my-16 !print:h-auto !print:mt-16">
       <h2 className="text-center text-lg sm:text-xl">
         <Balancer>
           If you wish to know more about me or my projects, you can

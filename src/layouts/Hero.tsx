@@ -33,6 +33,13 @@ export default function Hero() {
       >
         Contacts
       </button>
+      <p class="my-4 hidden print:block">
+        <small>
+          Printed from
+          <a class="px-1" href="https://me.sglkc.my.id">me.sglkc.my.id</a>
+          at { new Date().toLocaleString('en-US') }
+        </small>
+      </p>
       <div
         class={clsx(
           'print:mt-8 print:pl-0 px-0.25 py-8 bg-black z-0 print:animate-none',

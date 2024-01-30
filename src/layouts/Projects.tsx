@@ -23,7 +23,7 @@ export default function Projects() {
       <div
         className={clsx(
           'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4',
-          'print:grid-cols-3 gap-8 justify-center max-w-256'
+          'print:grid-cols-3 print:mx-8 gap-8 justify-center max-w-256'
         )}
       >
         { projects.map((project, i) => <Project key={i} {...project} />)}
