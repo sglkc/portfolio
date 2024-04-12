@@ -1,6 +1,12 @@
-import clsx from 'clsx'
+import { ComponentChildren } from 'preact'
 import Balancer from 'react-wrap-balancer'
-import PrincipleProps from '@/types/Principle'
+import clsx from 'clsx'
+
+export type PrincipleProps = {
+  children: ComponentChildren
+  right?: true
+  title: string
+}
 
 export default function Principle({ children, right, title }: PrincipleProps) {
   return (

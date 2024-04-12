@@ -6,28 +6,26 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "format": "prettier . --write"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@fontsource/dm-sans": "^4.5.9",
     "@fontsource/dm-serif-text": "^4.5.10",
-    "@iconify-json/mdi": "^1.1.50",
-    "@iconify-json/simple-icons": "^1.1.48",
-    "@unocss/reset": "^0.50.8",
+    "@iconify/utils": "^2.1.15",
+    "@studio-freight/react-lenis": "^0.0.43",
+    "@unocss/reset": "^0.58.3",
     "clsx": "^1.2.1",
     "framer-motion": "^10.11.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "preact": "^10.19.3",
     "react-wrap-balancer": "^0.4.0"
   },
   "devDependencies": {
+    "@iconify-json/devicon": "^1.1.35",
+    "@iconify-json/mdi": "^1.1.50",
+    "@preact/preset-vite": "^2.8.1",
     "@types/node": "^18.15.11",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "typescript": "^4.9.3",
-    "unocss": "^0.50.8",
-    "vite": "^4.2.0"
+    "typescript": "^5.3.3",
+    "unocss": "^0.58.3",
+    "vite": "^5.0.11"
   }
 }

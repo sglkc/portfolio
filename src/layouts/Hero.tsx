@@ -1,35 +1,43 @@
 import Balancer from 'react-wrap-balancer'
 import Section from '@/components/Section'
+import { useLenis } from '@studio-freight/react-lenis'
+import clsx from 'clsx'
 
 export default function Hero() {
+  const lenis = useLenis()
+  const toContacts = () => lenis.scrollTo('#contacts', {
+    duration: 3,
+    force: true
+  })
+
   return (
     <Section title="Cikal Gemintang Seya" className="my-32 gap-8">
       <h2 className="font-bold text-lg sm:text-xl text-center">
         Front-End Developer / Back-End Developer
       </h2>
-      <p className="text-center leading-6.5 w-full">
+      <p className="text-center leading-6.5">
         <Balancer>
-          I'm a web developer from Indonesia with 2 years experience. I’m
-          committed to create intuitive, responsive, and accessible websites
-          with maintainability and scalability as the focus in development
-          while considering the current industry best practices.
-          Exploring new things has always lead me to be a better programmer.
+          I am a web developer from Indonesia with over 2 years of experience.
+          Usually work around my hobbies and interests, I always try to be
+          imaginative to train my creative thinking skill. Exploring new things
+          has always lead me to be a better programmer.
         </Balancer>
       </p>
-      <div className="flex gap-8">
-        <a
-          className="i-mdi:github transition-icon on:text-[#333333]"
-          href="https://github.com/sglkc/"
-        >GitHub</a>
-        <a
-          className="i-mdi:linkedin transition-icon on:text-[#1572b6]"
-          href="https://linkedin.com/in/cikal-gs/"
-        >LinkedIn</a>
-        <a
-          className="i-mdi:gmail transition-icon on:text-[#d14836]"
-          href="mailto:cikalgemintangseya1@gmail.com"
-        >Email</a>
-      </div>
+      <button
+        class={clsx(
+          'b-2 b-black text-black fw-bold px-8 py-4 sm:(b-1 px-6 py-2)',
+          'print:hidden transition-colors on:bg-black on:text-white'
+        )}
+        onClick={toContacts}
+      >
+        Contacts
+      </button>
+      <div
+        class={clsx(
+          'print:mt-8 print:pl-0 px-0.25 py-8 bg-black z-0 print:animate-none',
+          'animate-[3s_ease_1s_scroll-scale_infinite_both]'
+        )}
+      />
     </Section>
   )
 }

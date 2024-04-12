@@ -1,23 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { render } from 'preact'
 import { Provider } from 'react-wrap-balancer'
 import { LazyMotion } from 'framer-motion'
+import { ReactLenis } from '@studio-freight/react-lenis'
 import App from './App'
-import '@fontsource/dm-sans/400.css'
-import '@fontsource/dm-sans/500.css'
-import '@fontsource/dm-sans/700.css'
+import '@fontsource/dm-sans/latin-400.css'
+import '@fontsource/dm-sans/latin-500.css'
+import '@fontsource/dm-sans/latin-700.css'
 import '@fontsource/dm-serif-text'
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
+import './style.css'
 
 const framerFeatures = () => import('@/framer-features').then(i => i.default)
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <LazyMotion features={framerFeatures} strict>
-      <Provider>
+render(
+  <LazyMotion features={framerFeatures} strict>
+    <Provider>
+      <ReactLenis root>
         <App />
-      </Provider>
-    </LazyMotion>
-  </React.StrictMode>,
+      </ReactLenis>
+    </Provider>
+  </LazyMotion>,
+  document.getElementById('root')!
 )

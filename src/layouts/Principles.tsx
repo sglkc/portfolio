@@ -3,8 +3,10 @@ import Section from '@/components/Section'
 
 export default function Principles() {
   return (
-    <Section title="Principles" className="max-w-192">
-      <div className="mx-0 sm:ml-[clamp(0rem,5vw,8rem)] grid gap-8 w-full">
+    <Section title="Principles" className="max-w-192 !print:h-auto !print:mt-16">
+      <div
+        class="px-4 print:px-8 sm:ml-[clamp(0rem,5vw,8rem)] grid gap-8 print:gap-4 w-full"
+      >
         <Principle title="Development">
           Reading documentation, following code design patterns, and
           embracing best practices are my principle in writing clean codes.
