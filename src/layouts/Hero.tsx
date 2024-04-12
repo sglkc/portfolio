@@ -17,10 +17,10 @@ export default function Hero() {
       </h2>
       <p className="text-center leading-6.5">
         <Balancer>
-          I am a web developer from Indonesia with 2 years experience. Usually
-          work around my hobbies and interests, I always try to be imaginative
-          to train my creative thinking skill. Exploring new things has always
-          lead me to be a better programmer.
+          I am a web developer from Indonesia with over 2 years of experience.
+          Usually work around my hobbies and interests, I always try to be
+          imaginative to train my creative thinking skill. Exploring new things
+          has always lead me to be a better programmer.
         </Balancer>
       </p>
       <button
@@ -32,13 +32,6 @@ export default function Hero() {
       >
         Contacts
       </button>
-      <p class="my-4 hidden print:block">
-        <small>
-          Printed from
-          <a class="px-1" href="https://me.sglkc.my.id">me.sglkc.my.id</a>
-          at { new Date().toLocaleString('en-US') }
-        </small>
-      </p>
       <div
         class={clsx(
           'print:mt-8 print:pl-0 px-0.25 py-8 bg-black z-0 print:animate-none',

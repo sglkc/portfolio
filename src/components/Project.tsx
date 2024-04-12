@@ -23,7 +23,7 @@ export default function Project({ url, name, src }: ProjectProps) {
         height="480"
         draggable={false}
       />
-      <p className="text-center font-medium">{ name }</p>
+      <p className="text-center font-medium print:text-sm">{ name }</p>
     </Tag>
   )
 }
