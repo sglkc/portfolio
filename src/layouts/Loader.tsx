@@ -1,8 +1,8 @@
-import { StateUpdater, useEffect, useState } from 'preact/hooks'
+import { Dispatch, StateUpdater, useEffect, useState } from 'preact/hooks'
 import { m as motion } from 'framer-motion'
 
 export type LoaderProps = {
-  setLoader: StateUpdater<boolean>
+  setLoader: Dispatch<StateUpdater<boolean>>
 }
 
 export default function Loader({ setLoader }: LoaderProps) {

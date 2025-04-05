@@ -11,21 +11,26 @@
   "dependencies": {
     "@fontsource/dm-sans": "^4.5.9",
     "@fontsource/dm-serif-text": "^4.5.10",
-    "@iconify/utils": "^2.1.15",
+    "@iconify/utils": "^2.3.0",
     "@studio-freight/react-lenis": "^0.0.43",
-    "@unocss/reset": "^0.58.3",
+    "@unocss/reset": "^0.58.9",
     "clsx": "^1.2.1",
-    "framer-motion": "^10.11.2",
-    "preact": "^10.19.3",
-    "react-wrap-balancer": "^0.4.0"
+    "framer-motion": "^10.18.0",
+    "preact": "^10.26.4",
+    "react-wrap-balancer": "^0.4.1"
   },
   "devDependencies": {
-    "@iconify-json/devicon": "^1.1.35",
-    "@iconify-json/mdi": "^1.1.50",
-    "@preact/preset-vite": "^2.8.1",
-    "@types/node": "^18.15.11",
-    "typescript": "^5.3.3",
-    "unocss": "^0.58.3",
-    "vite": "^5.0.13"
+    "@iconify-json/devicon": "^1.2.23",
+    "@iconify-json/mdi": "^1.2.3",
+    "@preact/preset-vite": "^2.10.1",
+    "@types/node": "^18.19.86",
+    "typescript": "^5.8.3",
+    "unocss": "^0.58.9",
+    "vite": "^5.4.17"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
