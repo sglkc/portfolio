@@ -3,7 +3,7 @@ import Section from '@/components/Section'
 import Social, { SocialProps } from '@/components/Social'
 
 const socials: SocialProps[] = [
-  { href: 'https://sglkc.my.id', icon: 'i-mdi:web' },
+  { href: 'https://seya.zip', icon: 'i-mdi:web' },
   { href: 'https://github.com/sglkc/', icon: 'i-mdi:github' },
   { href: 'https://linkedin.com/in/cikal-gs/', icon: 'i-mdi:linkedin' },
   {
